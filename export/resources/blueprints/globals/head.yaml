@@ -133,3 +133,4 @@ tabs:
               type: textarea
               display: 'Nav Bar'
               instructions: 'This field is for experts only. Leave it as it is if you are not an expert. Make a backup before making any changes.'
+              antlers: true
