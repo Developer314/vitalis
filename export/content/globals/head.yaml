@@ -1,0 +1,75 @@
+title: Head
+data:
+  favicon: icons8-favicon-48.png
+  spinner_loading_text: 'Loading Components..'
+  topbar_left_links:
+    -
+      id: m8hfr8uu
+      link_text: 'Our Location'
+      link_url: 'http://www.map.google.com'
+      link_target: _blank
+      link_icon: fa-map-marker-alt
+    -
+      id: m8hfshel
+      link_text: manup.rav@gmail.com
+      link_url: 'mailto:manup.rav@gmail.com'
+      link_target: _self
+      link_icon: fa-envelope
+    -
+      id: m8hfu8ma
+      link_text: 'About Us'
+      link_url: /about
+      link_target: _self
+      link_icon: fa-map-marker-alt
+  social_links:
+    -
+      id: m8hgtxdz
+      url: 'http://www.facebook.com'
+      icon: fa-facebook-f
+    -
+      id: m8hgu675
+      url: 'http://www.youtube.com'
+      icon: fa-youtube
+    -
+      id: m8hgudtv
+      url: 'http://www.linkedin.com'
+      icon: fa-linkedin-in
+    -
+      id: m8hgumbg
+      url: 'http://www.instagram.com'
+      icon: fa-instagram
+  site_logo: logo.png
+  extra_scripts: '<!-- Google Tags -->'
+  nav_bar: |-
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars"></span>
+                        </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <div class="navbar-nav mx-0 mx-lg-auto">
+    	                      {{ nav:main_navigation }}
+    							   
+    							    {{if children}}
+    							    
+    							    <div class="nav-item dropdown">
+                                    <a href="{{ url }}" class="nav-link" data-bs-toggle="dropdown">
+                                        <span class="dropdown-toggle">{{ title }}</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        {{children}}
+                                        <a href="{{ url }}" class="dropdown-item {{if is_current}} active {{/if}}">{{ title }}</a>
+                                        {{/children}}
+                                     </div>
+                                </div>
+    							    
+    							{{else}}
+    							    
+    							<a href="{{ url }}" class="nav-item nav-link {{if is_current}} active {{/if}}">{{ title }}</a>
+    							    
+    							    {{/if}}
+    							{{ /nav:main_navigation }}
+    							<div class="nav-btn px-3">
+                                    <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                                    <a href="/contact" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> Get a Quote</a>
+                                </div>
+                            </div>
+                        </div>

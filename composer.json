@@ -1,0 +1,24 @@
+{
+    "name": "developer314/vitalis",
+    "extra": {
+        "statamic": {
+            "name": "Vitalis",
+            "description": "Vitalis Statamic Multi Purpose Starterkit"
+        },
+        "laravel": {
+            "providers": [
+                "Developer314\\Vitalis\\ServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Developer314\\Vitalis\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    }
+}
